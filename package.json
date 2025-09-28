@@ -4,12 +4,12 @@
     "react-helmet-async": "^2.0.5"
   },
   "scripts": {
-  "dev": "vite --config vite.config.js",
-  "build": "vite build --config vite.config.js",
-  "preview": "vite preview --config vite.config.js"
-},
-
+    "dev": "vite --config vite.config.js",
+    "build": "vite build --config vite.config.js",
+    "preview": "vite preview --config vite.config.js"
+  },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
     "vite": "^5.0.0"
   }
 }
