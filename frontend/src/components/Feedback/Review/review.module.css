@@ -1,261 +1,9 @@
-.container {
-  width: 100%;
-  padding: 40px 20px;
-  margin: 40px 0;
-  box-sizing: border-box;
-  background-color: #ffe066; /* kuning */
-  color: #22364a;
-  font-family: 'Poppins', sans-serif;
-  border-radius: 20px;
-}
-
-.Package {
-  margin-top: 16px;
-  text-align: left;
-}
-
-.sub_historyItem {
-  display: inline-block;
-}
-
-.list_historyItem {
-  background: #3056B3;
-  color: #fff;
-  font-size: 2.4rem;
-  font-weight: 700;
-  padding: 18px 48px 18px 32px;
-  border-radius: 0 48px 48px 48px;
-  display: inline-block;
-  min-width: 340px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin-bottom: 12px;
-}
-
-.wrap_title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 8px;
-  margin-bottom: 60px;
-}
-
-.wordItem {
-  font-size: 15px;
-  color: #222;
-  margin-top: 4px;
-  display: block;
-}
-
-/* Card Form */
-.feedback_card {
-  background-color: #D6DFF5;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 16px;
-  border:#031540 1px solid;
-}
-
-.formTitle {
-  text-align: center;
-  margin-bottom: 12px;
-  font-size: 16px;
-  color: #333;
-}
-
-/* Rating */
-.stars {
-  text-align: center;
-  margin-bottom: 12px;
-}
-.star {
-  font-size: 28px;
-  color: #ffffff;
-  cursor: pointer;
-}
-.starActive {
-  font-size: 28px;
-  color: #ffc107;
-  cursor: pointer;
-}
-
-/* Input */
-.input_feedback {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.inputText,
-.textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-.textarea {
-  resize: none;
-}
-
-/* Buttons */
-.actionGroup {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-}
-
-.upload_label {
-  background: #4d88ff;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.upload_label input {
-  display: none;
-
-}
-
-.shareBtn {
-  background: #3056B3;
-  color: white;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.shareBtn:hover {
-  background: #4d88ff;
-}
-
-.previewText {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #444;
-}
-
-
-
-.review_imageWrapper {
-  width: 100%;
-  height: 150px;        /* fix tinggi gambar */
-  background: #f0f0f0;
-  overflow: hidden;
-}
-
-.review_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* gambar tetap proporsional, dipotong */
-}
-
-.image_placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #ddd 25%, #bbb 100%);
-}
-
-.review_content {
-  padding: 12px;
-  flex-grow: 1;         /* isi tetap fleksibel */
-}
-
-.review_name {
-  font-weight: 600;
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #222;
-}
-
-.review_text {
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-.review_rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-  border-top: 1px solid #eee;
-  scrollbar-width: none;
-}
-
-.stars {
-  color: #ffc107;
-  font-size: 14px;
-}
-
-.rating_number {
-  font-size: 13px;
-  font-weight: 600;
-  color: #333;
-}
-
-/* .rating {
-  color: #ffc107;
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.review_photo {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 8px;
-} */
-
-
-.swiper {
-  width: 100%;
-  padding: 20px 0;
-}
-
-.review_list {
-  display: flex;
-  flex-wrap: nowrap;        /* baris tunggal */
-  gap: 20px;                /* jarak antar card */
-  overflow-x: auto;         /* bisa digulir ke samping */
-  scroll-behavior: smooth;  /* gulir halus */
-  padding: 20px 0;
-  background-color: transparent;
-
-  /* Hilangkan scrollbar di semua browser */
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-.review_list::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
-}
-
-.review_list::-webkit-scrollbar-thumb {
-  background: #bbb;
-  border-radius: 4px;
-}
-.review_list::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.review_card {
-  flex: 0 0 calc(20% - 16px); /* maksimal 5 card per row */
-  max-width: 300px;           /* biar tidak terlalu besar */
-  min-width: 220px;           /* biar tetap responsif di layar kecil */
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.review_card:hover {
-  transform: translateY(-5px); /* animasi hover */
-}/* --- Global Variables & Theme --- */
+/* --- Global Variables & Theme --- */
 :root {
   --bg-dark: #d2deff;
   --text-light: #f0f0f0;
   --text-secondary: #a0a0c0;
-  /* --primary-glow-blue: #00e0ff; */
+  --primary-glow-blue: #00e0ff;
   --primary-glow-purple: #7f00ff;
   --accent-gold: #ffc107;
   --card-bg: rgba(35, 35, 55, 0.5); /* Glassmorphism background */
@@ -268,8 +16,11 @@
   padding: 40px 20px;
   box-sizing: border-box;
   background-color: var(--bg-dark); /* Ganti background utama */
-  color: var(--text-light);
+  color: #031540; /* Ganti warna teks agar terlihat di background cerah */
   font-family: 'Poppins', sans-serif; /* Font modern */
+  border-radius: 20px; /* Tambahkan kembali border-radius */
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .Package {
@@ -288,13 +39,16 @@
 
 .list_historyItem {
   background: #3056B3;          /* Biru */
-  color: #fff;                  /* Tulisan putih */
-  font-size: 1.6rem;
-  font-weight: 700;
-  padding: 12px 28px;
-  border-radius: 0 30px 0 30px;  /* Rounded style */
+  padding: 2px 48px 10px 28px;
+ border-radius: 0 32px;  /* Rounded style */
   display: inline-block;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: -290px;
+}
+.sub_historyItem h2 {
+  color: #fff;                  /* Tulisan putih */
+   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .wordItem {
@@ -415,7 +169,7 @@
   margin-bottom: 20px;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-light);
+  color: #031540; /* Ganti warna teks agar terlihat */
 }
 
 /* Form Rating Stars */
@@ -432,7 +186,7 @@
 }
 
 .star {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(3, 21, 64, 0.3); /* Ganti warna bintang tidak aktif */
 }
 
 .star:hover {
@@ -457,7 +211,7 @@
   width: 100%;
   padding: 12px 15px;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
+  border: 1px solid #031540; /* Ganti warna border input */
   background-color: #ffffff;
   color: #031540 ;
   font-size: 1rem;
@@ -466,8 +220,8 @@
 
 .inputText:focus, .textarea:focus {
   outline: none;
-  border-color: var(--primary-glow-blue);
-  box-shadow: 0 0 10px rgba(0, 224, 255, 0.5);
+  border-color: #3056B3; /* Ganti warna border fokus */
+  box-shadow: 0 0 10px rgba(48, 86, 179, 0.5); /* Ganti warna shadow fokus */
 }
 
 .textarea {
@@ -502,7 +256,6 @@
 }
 .upload_label input {
   display: none;
-  
 }
 .upload_label:hover {
   background: #031540;
@@ -513,24 +266,26 @@
 
 /* Share button (primary) */
 .shareBtn {
-  background: linear-gradient(45deg, var(--primary-glow-purple), var(--primary-glow-blue));
+  background: #3056B3; /* Gunakan warna biru yang konsisten */
   color: white;
-  box-shadow: 0 0 20px rgba(0, 224, 255, 0.4);
+  box-shadow: 0 0 10px rgba(48, 86, 179, 0.4);
 }
 .shareBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(127, 0, 255, 0.6);
+  background: #4d88ff; /* Warna sedikit lebih terang saat hover */
+  box-shadow: 0 0 15px rgba(77, 136, 255, 0.6);
 }
 
 .previewText {
   margin-top: 10px;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: #031540; /* Ganti warna teks */
   width: 100%; /* Agar tidak mengganggu layout flex */
 }
 
 
 /* --- RESPONSIVE BREAKPOINTS --- */
+
 
 /* Mobile devices (phones, 600px and down) */
 @media (max-width: 600px) {
@@ -538,9 +293,11 @@
     padding: 20px 10px;
   }
 
+  /* Perbaikan untuk .list_historyItem di mobile */
   .list_historyItem {
-    font-size: 1.2rem;
-    padding: 10px 20px;
+    font-size: 1.1rem; /* Ukuran font lebih kecil untuk mobile */
+    padding: 8px 18px; /* Padding lebih kecil */
+    border-radius: 0 20px 0 20px; /* Radius sedikit lebih kecil */
   }
   
   .wordItem {
@@ -578,6 +335,43 @@
     text-align: center;
   }
 }
+
+/* Tambahan media query untuk device HP dengan ukuran maksimal 352px */
+@media (max-width: 352px) {
+  .list_historyItem {
+    font-size: 0.9rem; /* Lebih kecil lagi untuk HP sangat kecil */
+    padding: 6px 14px; /* Padding disesuaikan */
+    border-radius: 0 15px 0 15px; /* Radius lebih kecil lagi */
+  }
+
+  .wordItem {
+    font-size: 0.8rem;
+  }
+
+  .review_card {
+    flex: 0 0 95%; /* Card hampir memenuhi lebar penuh */
+    min-width: 200px; /* Minimum width agar tetap terbaca */
+  }
+  
+  .formTitle {
+    font-size: 0.9rem;
+  }
+  
+  .star, .starActive {
+    font-size: 28px; /* Bintang sedikit lebih kecil */
+  }
+  
+  .inputText, .textarea {
+    padding: 10px 12px; /* Input padding lebih kecil */
+    font-size: 0.9rem;
+  }
+  
+  .upload_label, .shareBtn {
+    padding: 8px 18px; /* Tombol padding lebih kecil */
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Tablet devices (601px to 991px) */
 @media (min-width: 601px) and (max-width: 991px) {

@@ -15,7 +15,7 @@ function Home() {
   return (
     <div>
       <Helmet>
-        <title>Custom Acrylic | Akrilik Custom, Cutting Acrylic</title>
+        <title>Custom Acrylic | Akrilik Custom, Cutting Acrylic, Pembuatan Akrilik, Toko Akrilik</title>
         <meta
           name="description"
           content="Cahaya Acrylic menjual berbagai jenis akrilik: akrilik bening, warna, dan custom dengan harga terbaik untuk kebutuhan rumah, kantor, dan dekorasi."
@@ -38,25 +38,6 @@ function Home() {
 
       <Navbar />
       <Swipe />
-      {/* <Hero /> */}
-
-      {/* Section Keyword */}
-      {/* <section className={styles.keyword}>
-        <div className={styles.text}> 
-          <h1>
-            Custom Acrylic | Kustom Akrilik & Akrilik Custom Sesukamu
-          </h1>
-          <p>
-            Custom Acrylic melayani berbagai kebutuhan custom acrylic seperti
-            plakat akrilik, gantungan kunci akrilik, cutting akrilik, hingga
-            display akrilik dengan harga terjangkau.
-          </p>
-          <button className={styles.button}><Link to="/product">Our Product</Link></button>
-        </div>
-        <div className={styles.image}>
-          <img src="/home.jpg" alt="Custom Acrylic" />
-        </div>
-      </section> */}
       <Service />
       
       <TopItem />
