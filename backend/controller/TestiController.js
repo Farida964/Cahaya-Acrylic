@@ -1,4 +1,5 @@
 import Testi from "../models/TestiModel.js";
+import { put } from '@vercel/blob';
 
 // Get all testimonials
 export const getTesti = async (req, res) => {
@@ -26,10 +27,15 @@ export const getTestiById = async (req, res) => {
 // Create testimonial
 export const createTesti = async (req, res) => {
   try {
-    const { nama, kota, deskripsi, rating } = req.body; // ✅ ambil rating juga
-    const foto = req.file ? req.file.filename : null;
+    const { nama, kota, deskripsi, rating } = req.body;
+    let fotoUrl = null;
 
-    await Testi.create({ nama, kota, deskripsi, foto, rating }); // ✅ simpan rating
+    if (req.file) {
+      const { url } = await put(req.file.originalname, req.file.buffer, { access: 'public' });
+      fotoUrl = url;
+    }
+
+    await Testi.create({ nama, kota, deskripsi, foto: fotoUrl, rating });
     res.status(201).json({ msg: "Testimoni berhasil ditambahkan" });
   } catch (error) {
     res.status(500).json({ msg: error.message });
@@ -42,10 +48,15 @@ export const updateTesti = async (req, res) => {
     const testi = await Testi.findOne({ where: { id: req.params.id } });
     if (!testi) return res.status(404).json({ msg: "Data tidak ditemukan" });
 
-    const { nama, kota, deskripsi, rating } = req.body; // ✅ ambil rating juga
-    const foto = req.file ? req.file.filename : testi.foto;
+    const { nama, kota, deskripsi, rating } = req.body;
+    let fotoUrl = testi.foto;
 
-    await testi.update({ nama, kota, deskripsi, foto, rating }); // ✅ update rating
+    if (req.file) {
+      const { url } = await put(req.file.originalname, req.file.buffer, { access: 'public' });
+      fotoUrl = url;
+    }
+
+    await testi.update({ nama, kota, deskripsi, foto: fotoUrl, rating });
     res.json({ msg: "Testimoni berhasil diupdate" });
   } catch (error) {
     res.status(500).json({ msg: error.message });
