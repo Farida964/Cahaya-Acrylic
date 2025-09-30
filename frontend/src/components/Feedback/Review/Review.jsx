@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react"; // ⬅️ tambahkan useRef
 import axios from "axios";
 import styles from "./review.module.css";
 
@@ -12,7 +12,7 @@ const Review = () => {
     rating: 0,
   });
 
-  const sliderRef = useRef(null);
+  const sliderRef = useRef(null); // ⬅️ ref untuk list review
 
   useEffect(() => {
     fetchReviews();
@@ -20,7 +20,7 @@ const Review = () => {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get("/api/testi");
+      const res = await axios.get("https://api.cahaya-acrylic.com/testi");
       setReviews(res.data);
     } catch (err) {
       console.error("Error fetching reviews:", err);
@@ -54,7 +54,7 @@ const Review = () => {
     if (formData.foto) data.append("foto", formData.foto);
 
     try {
-      await axios.post("/api/testi", data, {
+      await axios.post("https://api.cahaya-acrylic.com/testi", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       await fetchReviews();
@@ -64,6 +64,7 @@ const Review = () => {
     }
   };
 
+  // === AUTO SLIDER (Review List) ===
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider || reviews.length === 0) return;
@@ -80,7 +81,7 @@ const Review = () => {
       const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
       if (slider.scrollLeft + scrollSpeed >= maxScrollLeft) {
-        slider.scrollLeft = 0;
+        slider.scrollLeft = 0; // reset ke awal
       } else {
         slider.scrollLeft += scrollSpeed;
       }
@@ -130,6 +131,7 @@ const Review = () => {
         </div>
         <span className={styles.wordItem}> See and share your review!</span>
 
+        {/* Bagian Review Cards Auto Slide */}
         <div className={styles.review_list} ref={sliderRef}>
           {reviews.length > 0 ? (
             reviews.map((rev, index) => (
@@ -137,7 +139,7 @@ const Review = () => {
                 <div className={styles.review_imageWrapper}>
                   {rev.foto ? (
                     <img
-                      src={rev.foto}
+                      src={`https://api.cahaya-acrylic.com/uploads/${rev.foto}`}
                       alt={rev.nama}
                       className={styles.review_image}
                     />
@@ -172,6 +174,7 @@ const Review = () => {
         </div>
       </section>
 
+      {/* Form Review (tetap statis) */}
       <section className={styles.Package}>
         <div className={styles.sub_historyItem}>
           <h2 className={styles.list_historyItem}>Give a Review</h2>
@@ -185,6 +188,7 @@ const Review = () => {
             Apakah kamu puas dengan produk kami?
           </h3>
 
+          {/* Rating */}
           <div className={styles.stars}>
             {[1, 2, 3, 4, 5].map((index) => (
               <span
@@ -226,6 +230,7 @@ const Review = () => {
             />
           </div>
 
+          {/* Upload Foto */}
           <div className={styles.actionGroup}>
             <label className={styles.upload_label}>
               <input type="file" accept="image/*" onChange={handleFileChange} />

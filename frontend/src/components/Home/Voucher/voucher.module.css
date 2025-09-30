@@ -61,7 +61,16 @@
 
 
 /* RESPONSIVE */
-
+@media (max-width: 410px) {
+  .voucher_card h2 {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .voucher_card p {
+    font-size: 8px;
+    margin-top: -15px;
+  }
+}
 /* MOBILE */
 @media (max-width: 767px) {
   .voucher {
@@ -162,18 +171,18 @@
     border-radius: 12px;
   }
   .voucher_card h2 {
-    font-size: 15px;
-  }
-  .voucher_card p {
     font-size: 11px;
   }
+  .voucher_card p {
+    font-size: 10px;
+  }
   .title_voucher1 {
-    font-size: 1.1rem;
-    margin-top: 18px;
+    font-size: 4px;
+    margin-top: 10px;
     margin-right: 10px;
   }
   .p_voucher1 {
-    font-size: 1rem;
+    font-size: 5px;
     margin-right: 10px;
   }
   .button_detail {
@@ -194,6 +203,12 @@
         width: 80%;
         height: auto;
         padding: 20px;
+    }
+    .voucher_card h2 {
+        font-size: 13px;
+    }
+    .voucher_card p {
+        font-size: 10px;
     }
 
     .title_voucher1 {
