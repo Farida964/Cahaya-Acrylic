@@ -385,6 +385,29 @@ display: inline-block;
   .layanan_card h2 {
     font-size: 1.2rem;
   }
+ .advantages_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  .advantage_item {
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+    min-width: 110px; /* agar tidak mengecil saat scroll */
+    border-radius: 12px;
+  }
+  .advantage_icon {
+    font-size: 1.7rem;
+  }
+  .advantage_item h3 {
+    font-size: 0.8rem;
+    margin-top: 8px;
+  }
   .layanan_card p {
     font-size: 0.85rem;
   }
@@ -392,4 +415,4 @@ display: inline-block;
     padding: 8px 20px;
     font-size: 0.85rem;
   }
-}
+}   

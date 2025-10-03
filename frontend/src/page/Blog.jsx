@@ -8,215 +8,9 @@ import { Helmet } from "react-helmet-async";
 // ---------- Base URL untuk SEO ----------
 const BASE_URL = "https://cahaya-acrylic.com";
 
-// ---------- Data artikel (lengkap sesuai permintaan) ----------
-const postsData = [
-  // EDUKASI & INFORMASI
-  {
-    id: 1,
-    title: "Perbedaan Akrilik dan Kaca: Mana yang Lebih Baik?",
-    slug: "akrilik-vs-kaca-mana-lebih-baik",
-    date: "2025-09-23",
-    author: "Cahaya Acrylic",
-    category: "Edukasi",
-    cover: "/blog/AK.jpeg",
-    coverAlt: "Perbandingan akrilik dan kaca",
-    keywords: ["akrilik vs kaca", "keunggulan akrilik", "kaca vs akrilik"],
-    excerpt:
-      "Bandingkan akrilik dan kaca dari sisi kekuatan, bobot, kejelasan, dan harga. Temukan mana yang terbaik untuk kebutuhan Anda.",
-    content:
-      "<p>Akrilik dan kaca masing-masing punya keunggulan. Akrilik lebih ringan dan tahan benturan, kaca lebih tahan gores dan tahan panas. Pilihan terbaik bergantung pada kebutuhan desain, budget, dan lokasi pemasangan.</p>",
-  },
-  {
-    id: 2,
-    title: "Jenis-Jenis Akrilik dan Fungsinya",
-    slug: "jenis-jenis-akrilik-dan-fungsinya",
-    date: "2025-09-22",
-    author: "Cahaya Acrylic",
-    category: "Edukasi",
-    cover: "/blog/JJA.png",
-    coverAlt: "Jenis jenis akrilik",
-    keywords: ["jenis akrilik", "macam akrilik", "fungsi akrilik"],
-    excerpt:
-      "Pelajari jenis-jenis akrilik: bening, opal, translucent, mirror, dan cast vs extruded — serta fungsi ideal masing-masing.",
-    content:
-      "<p>Ada banyak jenis akrilik: bening untuk display, opal untuk diffuser lampu, mirror akrilik sebagai alternatif kaca cermin, dan lain-lain. Pilih yang sesuai fungsinya.</p>",
-  },
-  {
-    id: 3,
-    title: "Apa Itu Akrilik? Pengertian dan Kegunaannya",
-    slug: "apa-itu-akrilik-pengertian-dan-kegunaannya",
-    date: "2025-09-21",
-    author: "Cahaya Acrylic",
-    category: "Edukasi",
-    cover: "/blog/APA.jpg",
-    coverAlt: "Penjelasan apa itu akrilik",
-    keywords: ["apa itu akrilik", "kegunaan akrilik", "definisi akrilik"],
-    excerpt:
-      "Akrilik adalah plastik transparan (PMMA) yang punya banyak aplikasi — dari signage hingga komponen industri. Simak penjelasan lengkapnya di sini.",
-    content:
-      "<p>Akrilik (PMMA) adalah bahan sintetis yang sering dipakai sebagai alternatif kaca. Keunggulannya ringan, mudah dibentuk, dan tersedia berbagai warna.</p>",
-  },
-  {
-    id: 4,
-    title: "Kelebihan dan Kekurangan Bahan Akrilik",
-    slug: "kelebihan-kekurangan-akrilik",
-    date: "2025-09-20",
-    author: "Cahaya Acrylic",
-    category: "Edukasi",
-    cover: "/blog/KK.jpg",
-    coverAlt: "Kelebihan dan kekurangan akrilik",
-    keywords: ["kelebihan akrilik", "kekurangan akrilik"],
-    excerpt:
-      "Ketahui sisi positif dan negatif akrilik agar Anda bisa menentukan kapan harus memilih akrilik atau material alternatif.",
-    content:
-      "<p>Ringan dan mudah dibentuk adalah kelebihan akrilik; namun akrilik dapat tergores lebih mudah dibanding kaca dan memiliki ketahanan panas yang terbatas.</p>",
-  },
-
-  // TIPS & TUTORIAL
-  {
-    id: 5,
-    title: "Cara Membersihkan Akrilik Agar Tetap Mengkilap",
-    slug: "cara-membersihkan-akrilik-agar-mengkilap",
-    date: "2025-09-19",
-    author: "Cahaya Acrylic",
-    category: "Tips",
-    cover: "/blog/BA.jpg",
-    coverAlt: "Membersihkan akrilik",
-    keywords: ["cara membersihkan akrilik", "perawatan akrilik", "membersihkan akrilik"],
-    excerpt:
-      "Panduan aman membersihkan akrilik tanpa menggores permukaan: bahan pembersih yang aman, teknik lap, dan produk yang harus dihindari.",
-    content:
-      "<p>Gunakan kain microfiber dan sabun ringan. Hindari alkohol dan bahan abrasif. Tutorial lengkap + resep pembersih rumahan ada di artikel.</p>",
-  },
-  {
-    id: 6,
-    title: "Cara Membuat Box Akrilik Custom Sendiri (Tutorial DIY)",
-    slug: "cara-membuat-box-akrilik-custom-diy",
-    date: "2025-09-18",
-    author: "Cahaya Acrylic",
-    category: "Tips",
-    cover: "/blog/hntr.jpg",
-    coverAlt: "Membuat box akrilik DIY",
-    keywords: ["box akrilik custom", "DIY akrilik", "cara membuat box akrilik"],
-    excerpt:
-      "Step-by-step membuat box akrilik custom sederhana: ukuran, alat, lem khusus akrilik, dan tips finishing untuk hasil rapi.",
-    content:
-      "<p>Mulai dari ukuran dan pemotongan hingga perekat khusus PMMA — panduan step-by-step buat pemula yang ingin coba project akrilik DIY.</p>",
-  },
-  {
-    id: 7,
-    title: "Tips Merawat Plakat Akrilik Supaya Awet",
-    slug: "tips-merawat-plakat-akrilik-supaya-awet",
-    date: "2025-09-17",
-    author: "Cahaya Acrylic",
-    category: "Tips",
-    cover: "/blog/PLKT_5.jpg",
-    coverAlt: "Perawatan plakat akrilik",
-    keywords: ["plakat akrilik", "cara merawat akrilik", "merawat plakat"],
-    excerpt:
-      "Cara menjaga plakat akrilik agar tidak kusam dan tetap mengkilap: penyimpanan, pembersihan, dan handling saat pengiriman.",
-    content:
-      "<p>Simpanan di tempat tidak langsung terkena matahari, gunakan kemasan busa saat kirim, dan bersihkan dengan lembut. Detail tips ada di dalam artikel.</p>",
-  },
-
-  // KOMERSIAL / PRODUK
-  {
-    id: 8,
-    title: "Harga Akrilik Per Lembar Terbaru",
-    slug: "harga-akrilik-per-lembar-terbaru",
-    date: "2025-09-16",
-    author: "Cahaya Acrylic",
-    category: "Produk",
-    cover: "/blog/lmbr.jpg",
-    coverAlt: "Harga akrilik per lembar",
-    keywords: ["harga akrilik", "harga akrilik per lembar"],
-    excerpt:
-      "Update harga akrilik per lembar (ukuran standar) — faktor yang mempengaruhi harga: ketebalan, jenis, kuantitas pemesanan, dan lokasi pengiriman.",
-    content:
-      "<p>Harga tergantung jenis dan ketebalan. Artikel ini memberikan kisaran harga dan tips mendapatkan penawaran terbaik.</p>",
-  },
-  {
-    id: 9,
-    title: "Rekomendasi Rak Display Akrilik untuk Toko dan Pameran",
-    slug: "rekomendasi-rak-display-akrilik",
-    date: "2025-09-15",
-    author: "Cahaya Acrylic",
-    category: "Produk",
-    cover: "/blog/rak.jpg",
-    coverAlt: "Rak display akrilik",
-    keywords: ["rak display akrilik", "rak akrilik toko"],
-    excerpt:
-      "Pilihan rak display akrilik yang cocok untuk toko dan pameran: model bertingkat, rotating, dan modular — plus rekomendasi ukuran dan material.",
-    content:
-      "<p>Kami ulas beberapa model rak display berdasarkan tujuan: display produk kecil, showcase pameran, dan rak kasual untuk toko retail.</p>",
-  },
-  {
-    id: 10,
-    title: "Plakat Akrilik Custom: Cocok untuk Souvenir dan Penghargaan",
-    slug: "plakat-akrilik-custom-souvenir-penghargaan",
-    date: "2025-09-14",
-    author: "Cahaya Acrylic",
-    category: "Produk",
-    cover: "/blog/plkt.jpg",
-    coverAlt: "Plakat akrilik custom",
-    keywords: ["plakat akrilik", "souvenir akrilik", "plakat custom"],
-    excerpt:
-      "Plakat akrilik custom ideal untuk penghargaan perusahaan atau souvenir event. Pilih bentuk, ketebalan, dan printing yang sesuai.",
-    content:
-      "<p>Beragam opsi finishing: printing UV, engraving, maupun kombinasi metal plate. Kami jelaskan mana yang cocok untuk budget dan tampilan premium.</p>",
-  },
-  {
-    id: 11,
-    title: "Huruf Timbul Akrilik: Solusi Branding Modern",
-    slug: "huruf-timbul-akrilik-solusi-branding",
-    date: "2025-09-13",
-    author: "Cahaya Acrylic",
-    category: "Produk",
-    cover: "/blog/tmbl.jpg",
-    coverAlt: "Huruf timbul akrilik",
-    keywords: ["huruf timbul akrilik", "neonbox akrilik", "huruf timbul"],
-    excerpt:
-      "Huruf timbul akrilik memberi kesan modern pada signage brand Anda — cara produksi, jenis finishing, dan estimasi biaya pemasangan.",
-    content:
-      "<p>Penjelasan tentang ketebalan, backlighting, dan cara pemasangan huruf timbul agar tahan lama dan terlihat profesional.</p>",
-  },
-
-  // SERVICE / JASA
-  {
-    id: 12,
-    title: "Jasa Potong Akrilik Terpercaya di seJABODETABEK",
-    slug: "jasa-potong-akrilik-terpercaya-lokasi",
-    date: "2025-09-12",
-    author: "Cahaya Acrylic",
-    category: "Jasa",
-    cover: "/blog/proses.jpg",
-    coverAlt: "Jasa potong akrilik",
-    keywords: ["jasa potong akrilik", "cutting akrilik", "jasa cutting"],
-    excerpt:
-      "Layanan potong akrilik presisi untuk kebutuhan industri dan kreatif — apa yang harus dicek sebelum memilih penyedia jasa potong akrilik.",
-    content:
-      "<p>Tips memilih vendor cutting: cek mesin (laser vs CNC), test potong, sample hasil, dan review pelanggan.</p>",
-  },
-  {
-    id: 13,
-    title: "Custom Akrilik: Buat Desain Sesuai Kebutuhan",
-    slug: "custom-akrilik-buat-desain",
-    date: "2025-09-11",
-    author: "Cahaya Acrylic",
-    category: "Jasa",
-    cover: "/blog/cs.jpg",
-    coverAlt: "Jasa custom akrilik",
-    keywords: ["custom akrilik", "desain akrilik", "akrilik custom"],
-    excerpt:
-      "Jasa custom akrilik mulai dari konsultasi desain sampai produksi massal. Pelajari proses, estimasi waktu, dan opsi finishing yang tersedia.",
-    content:
-      "<p>Kami jelaskan alur kerja custom: briefing desain, mockup, approval sample, produksi, dan quality control sebelum pengiriman.</p>",
-  }
-];
-
 // ---------- Utilities ----------
-function findPostBySlug(slug) {
-  return postsData.find((p) => p.slug === slug);
+function findPostBySlug(posts, slug) {
+  return posts.find((p) => p.slug === slug);
 }
 
 function formatDate(dateStr) {
@@ -268,12 +62,12 @@ function useSEO({ title, description, keywords = [], canonical }) {
 }
 
 // ---------- Blog List ----------
-function BlogList({ onSelectCategory }) {
+function BlogList({ postsData, onSelectCategory }) {
   const [categoryFilter, setCategoryFilter] = useState("Semua");
   const categories = useMemo(() => {
     const set = new Set(postsData.map((p) => p.category));
     return ["Semua", ...Array.from(set)];
-  }, []);
+  }, [postsData]);
 
   useSEO({
     title: "Blog - Cahaya Acrylic | Custom Akrilik & Ide Produk",
@@ -337,7 +131,7 @@ function BlogList({ onSelectCategory }) {
     return () => {
       document.head.removeChild(script);
     };
-  }, []);
+  }, [postsData]);
 
   const filteredPosts =
     categoryFilter === "Semua"
@@ -460,7 +254,6 @@ function BlogDetail({ post }) {
     canonical: `${BASE_URL}${location.pathname}`,
   });
 
-  // JSON-LD Schema
   useEffect(() => {
     const ld = {
       "@context": "https://schema.org",
@@ -544,17 +337,33 @@ function BlogDetail({ post }) {
 function Blog() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const post = slug ? findPostBySlug(slug) : null;
+  const [postsData, setPostsData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Redirect jika slug tidak valid
   useEffect(() => {
-    if (slug && !post) {
+    fetch("/json/blogData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setPostsData(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Gagal memuat data blog:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  const post = slug ? findPostBySlug(postsData, slug) : null;
+
+  useEffect(() => {
+    if (slug && !post && !loading) {
       const timeout = setTimeout(() => navigate("/blog"), 1200);
       return () => clearTimeout(timeout);
     }
-  }, [slug, post, navigate]);
+  }, [slug, post, navigate, loading]);
 
-  if (!slug) return <BlogList />;
+  if (loading) return <p>Memuat data blog...</p>;
+  if (!slug) return <BlogList postsData={postsData} />;
   if (post) return <BlogDetail post={post} />;
 
   return (

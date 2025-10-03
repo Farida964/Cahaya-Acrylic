@@ -1,70 +1,108 @@
+import React, { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
-import TopItem from "../components/Home/Top_Item/TopItem";
-import Voucher from "../components/Home/Voucher/Voucher";
-// import TopPack from "../components/Home/Top_Pack/TopPack";
-import WhatsApp from "../components/Home/WhatsApp/WhatsApp";
-// import styles from "./home.module.css";
 import { Link } from "react-router-dom";
-import Service from "../components/Home/Service/Service";
-import Swipe from "../components/Home/Swipe/Swipe";
-import Klien from "../components/Home/Klien/Klien";
+import Navbar from "../components/Navbar/Navbar";
+
+// 💤 Lazy Load Komponen Berat
+const Swipe = lazy(() => import("../components/Home/Swipe/Swipe"));
+const Service = lazy(() => import("../components/Home/Service/Service"));
+const TopItem = lazy(() => import("../components/Home/Top_Item/TopItem"));
+const Voucher = lazy(() => import("../components/Home/Voucher/Voucher"));
+const WhatsApp = lazy(() => import("../components/Home/WhatsApp/WhatsApp"));
+const Klien = lazy(() => import("../components/Home/Klien/Klien"));
+const Footer = lazy(() => import("../components/Footer/Footer"));
 
 function Home() {
   return (
     <div>
+      {/* 🧠 SEO Helmet Section */}
       <Helmet>
-        <title>Custom Acrylic | Akrilik Custom, Cutting Acrylic</title>
+        <title>
+          Custom Acrylic & Akrilik Cutting Murah Jabodetabek | Cahaya Acrylic
+        </title>
         <meta
           name="description"
-          content="Cahaya Acrylic menjual berbagai jenis akrilik: akrilik bening, warna, dan custom dengan harga terbaik untuk kebutuhan rumah, kantor, dan dekorasi."
+          content="Cahaya Acrylic menjual berbagai jenis akrilik bening, warna, dan custom dengan harga terbaik. Melayani wilayah Jabodetabek untuk kebutuhan rumah, kantor, dan dekorasi."
         />
         <meta
           name="keywords"
-          content="cahaya acrylic, jual akrilik, akrilik bening, akrilik custom, harga akrilik murah, acrylic custom, custom acrylic, akrilik custom, custom akrilik, akrilik, acrylic, akrilik bogor, akrilik terdekat, plakat akrilik, jual akrilik, toko akrilik, toko acrylic, cutting acrylic, cutting akrilik, akrilik cutting, gantungan kunci, gantungan kunci acrylic, gantungan kunci akrilik"
+          content="custom acrylic jabodetabek, akrilik bening, cutting acrylic murah, plakat akrilik, gantungan kunci acrylic, toko akrilik bogor, toko acrylic jakarta"
         />
+        <meta name="author" content="Cahaya Acrylic" />
+        <link rel="canonical" href="https://cahaya-acrylic.com/" />
+
+        {/* 🟦 Open Graph */}
         <meta
           property="og:title"
-          content="Cahaya Acrylic | Akrilik Custom, Cutting Acrylic"
+          content="Custom Acrylic & Akrilik Cutting Murah Jabodetabek | Cahaya Acrylic"
         />
         <meta
           property="og:description"
-          content="Tempat jual akrilik terpercaya: bening, warna, dan custom dengan harga terbaik. Hanya di Cahaya Acrylic."
+          content="Jual akrilik bening, warna, dan custom dengan harga terbaik. Hanya di Cahaya Acrylic."
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://cahaya-acrylic.com/logo_CA.jpg" />
         <meta property="og:url" content="https://cahaya-acrylic.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* 🐦 Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Custom Acrylic & Akrilik Cutting Murah Jabodetabek | Cahaya Acrylic"
+        />
+        <meta
+          name="twitter:description"
+          content="Tempat jual akrilik terpercaya: bening, warna, dan custom."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cahaya-acrylic.com/logo_CA.jpg"
+        />
+
+        {/* 🏪 Schema.org LocalBusiness */}
+        <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Cahaya Acrylic",
+          "image": "https://cahaya-acrylic.com/logo_CA.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jabodetabek",
+            "addressCountry": "ID"
+          },
+          "url": "https://cahaya-acrylic.com",
+          "telephone": "+62 811-8840-838",
+          "description": "Jual acrylic lembaran, custom acrylic, dan piala acrylic wilayah Jabodetabek."
+        }
+        `}</script>
       </Helmet>
 
+      {/* ✅ Header & Hero Section */}
       <Navbar />
-      <Swipe />
-      {/* <Hero /> */}
+      <Suspense fallback={<div style={{ textAlign: "center", padding: "30px" }}>Loading...</div>}>
+        <Swipe />
 
-      {/* Section Keyword */}
-      {/* <section className={styles.keyword}>
-        <div className={styles.text}> 
-          <h1>
-            Custom Acrylic | Kustom Akrilik & Akrilik Custom Sesukamu
-          </h1>
+        <section className="hero-section" style={{ padding: "20px", textAlign: "center" }}>
+          <h1>Custom Acrylic & Akrilik Cutting Murah Jabodetabek</h1>
           <p>
-            Custom Acrylic melayani berbagai kebutuhan custom acrylic seperti
-            plakat akrilik, gantungan kunci akrilik, cutting akrilik, hingga
-            display akrilik dengan harga terjangkau.
+            Cahaya Acrylic melayani pembuatan & penjualan <strong>akrilik custom</strong>, 
+            <strong> akrilik bening</strong>, dan berbagai produk acrylic berkualitas untuk kebutuhan rumah, 
+            kantor, maupun dekorasi. Harga terjangkau — pelayanan cepat dan profesional.
           </p>
-          <button className={styles.button}><Link to="/product">Our Product</Link></button>
-        </div>
-        <div className={styles.image}>
-          <img src="/home.jpg" alt="Custom Acrylic" />
-        </div>
-      </section> */}
-      <Service />
-      
-      <TopItem />
-      <Voucher />
-      {/* <TopPack /> */}
-      <WhatsApp />
-      <Klien />
-      <Footer />
+          <Link to="/product" className="btn-utama">
+            Lihat Produk Kami
+          </Link>
+        </section>
+
+        {/* ✅ Konten Utama */}
+        <Service />
+        <TopItem />
+        <Voucher />
+        <WhatsApp />
+        <Klien />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

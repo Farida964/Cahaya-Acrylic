@@ -47,27 +47,24 @@ body {
    MAIN LAYOUT: kiri artikel | kanan sidebar
 ========================= */
 .blogList {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 28px;
-  align-items: start;
-  margin-top: 16px;
-}
-
-/* artikel stack (kiri) */
-.blogArticles {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* tetap horizontal */
   gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 16px;
+  flex-wrap: nowrap; /* tidak turun ke bawah */
 }
 
-/* sidebar (kanan) */
+.blogArticles {
+  flex: 0 0 65%; /* tetap ambil 65% ruang */
+  max-width: 65%;
+}
+
 .blogSidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  flex: 0 0 32%; /* tetap ambil 32% ruang */
+  max-width: 32%;
 }
-
 /* =========================
    ARTICLE CARD
 ========================= */
@@ -168,6 +165,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(16,24,40,0.06);
   padding: 18px;
+  margin-bottom: 20px;
+
 }
 
 .sidebarBox h3 {
@@ -355,8 +354,14 @@ body {
    RESPONSIVE
 ========================= */
 @media (max-width: 1024px) {
-  .blogList {
-    grid-template-columns: 1fr 320px;
+  .blogArticles {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .blogSidebar {
+    flex: 0 0 35%;
+    max-width: 35%;
   }
 }
 
@@ -373,4 +378,90 @@ body {
     padding: 18px;
     margin-top: 20px;
   }
+ .blogArticles {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+
+  .blogSidebar {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .blogCardImage {
+    padding-top: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .blogArticles {
+    flex: 0 0 50%;
+    max-width: 50%;
+     margin-right: 5%;
+  }
+
+  .blogSidebar {
+    flex: 0 0 45%;
+    max-width: 45%;
+    width: 90px;
+  }
+  .blogCard {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.blogCardTitle {
+  font-size: 0.90rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-decoration: none;
+  /* margin-bottom: 8px; */
+  display: inline-block;
+}
+.catBadge {
+  font-size: 0.70rem;
+  font-weight: 500;
+}
+.blogCardExcerpt {
+  font-size: 0.70rem;
+  color: #374151;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.blogCardMeta {
+  font-size: 0.48rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+} 
+.catBadge{
+  font-size: 0.48rem;
+}
+.keyword {
+  font-size: 0.48rem; 
+}
+.blogCard {
+  margin-bottom: 18px; 
+}
+.categoryList{
+  gap: 6px;
+  font-size: 0.48rem;
+}
+.popularList{
+  font-size: 0.48rem;
+}
+.sidebarBox p{
+  font-size: 0.48rem;
+  color: #0f172a;
+}
+.sidebarBox a{
+  font-size: 0.48rem;
+}
 }

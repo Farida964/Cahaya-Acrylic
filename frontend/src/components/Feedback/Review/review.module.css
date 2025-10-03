@@ -534,48 +534,83 @@
 
 /* Mobile devices (phones, 600px and down) */
 @media (max-width: 600px) {
-  .container {
-    padding: 20px 10px;
+  .review_list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 8px;
+  }
+
+  .review_card {
+    flex: 0 0 65%;   /* lebih kecil */
+    min-width: 180px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .review_imageWrapper {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .review_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .review_content {
+    padding: 8px 10px;
+  }
+
+  .review_name {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .review_text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #ffffff;
+  }
+
+  .review_rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .stars {
+    color: gold;
+  }
+
+  .rating_number {
+    color: #ffffff;
   }
 
   .list_historyItem {
     font-size: 1.2rem;
     padding: 10px 20px;
-  }
-  
-  .wordItem {
-    font-size: 0.9rem;
-  }
-
-  /* Mengubah arah layout untuk review cards di mobile */
-  .review_list {
-    flex-wrap: nowrap; /* Pastikan tetap satu baris */
-    overflow-x: scroll; /* Mengaktifkan scroll horizontal */
-    padding: 10px 0;
-  }
-  
-  .review_card {
-    flex: 0 0 85%; /* Setiap card 85% dari lebar viewport */
-    min-width: 250px;
-  }
-
-  .feedback_card {
-    padding: 20px;
-  }
-
-  .formTitle {
-    font-size: 1rem;
+    min-width: 220px;
   }
 
   .actionGroup {
-    flex-direction: column; /* Mengubah tombol menjadi vertikal */
-    align-items: stretch;
-    gap: 15px;
+    flex-direction: row; /* pastikan horizontal */
+    gap: 8px;
   }
 
-  .upload_label, .shareBtn {
-    width: 100%; /* Tombol memenuhi lebar container */
-    text-align: center;
+  .upload_label,
+  .shareBtn {
+    font-size: 0.8rem;
+    padding: 5px 8px; /* lebih kecil */
   }
 }
 

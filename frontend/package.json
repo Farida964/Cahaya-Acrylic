@@ -5,9 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npx react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+   "reactSnap": {
+    "inlineCss": true,
+    "puppeteerArgs": ["--no-sandbox"],
+    "include": [
+      "/",
+      "/product",
+      "/feedback",
+      "/blog",
+      "/blog/contoh-artikel-1",
+      "/blog/contoh-artikel-2"
+    ]
   },
   "dependencies": {
     "axios": "^1.10.0",
@@ -19,6 +31,7 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.7.0",
+    "react-snap": "^1.23.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
