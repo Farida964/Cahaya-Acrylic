@@ -1,7 +1,7 @@
 [
     {"id": 1, "title": "FREE ONGKIR", "value": "Kota Bogor", "img": "/voucher1.png", "detail1" : "Gratis pengiriman khusus daerah Kota Bogor."},
     {"id": 2, "title": "FREE ONGKIR", "value": "Min. Purchase of 5jt", "img": "/voucher2.png", "detail1" : "Gratis pengiriman se JABODETABEK."},
-    {"id": 3, "title": "FUN SEPTEMBER", "value": "OFF 5%", "img": "/voucher3.png", "detail1" : "Dapatkan potongan 5% untuk semua item."},
+    {"id": 3, "title": "SPESIAL 11.11", "value": "OFF 5%", "img": "/voucher3.png", "detail1" : "Dapatkan potongan 5% untuk semua item."},
     {"id": 4, "title": "SPECIAL AKHIR BULAN", "value": "Min. Purchase of 25K", "img": "/voucher4.png", "detail1" : "Dapatkan potongan ongkir 10% untuk pembelian pertama."},
     {"id": 5, "title": "BIRHTDAY ACRYLIC", "value": "Min. Purchase of 25K", "img": "/voucher5.png", "detail1" : "Dapatkan potongan ongkir 10% untuk pembelian pertama."}
 ]

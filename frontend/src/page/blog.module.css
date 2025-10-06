@@ -188,7 +188,6 @@ body {
   gap: 8px;
   text-align: left;
   font-size: 0.75rem;
-
 }
 
 .categoryBtn {
@@ -223,7 +222,14 @@ body {
   text-decoration: none;
   color: #0f172a;
   display: block;
-  padding: 6px 0;
+  background: transparent;
+  border: 1px solid #e6edf3;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f172a;
 }
 
 /* CTA */
@@ -365,16 +371,75 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Tetap dua kolom tapi ubah rasio lebar */
   .blogList {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr; /* Artikel lebih besar, sidebar lebih kecil */
+    gap: 20px;
+    align-items: start;
   }
 
-  .blogCardImage {
-    padding-top: 40%;
+  /* Artikel (kiri) */
+  .blogArticles {
+    gap: 16px;
   }
 
-  .aboutSection {
-    padding: 18px;
-    margin-top: 20px;
+  /* Sidebar (kanan) */
+  .blogSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Setiap card di sidebar */
+  .sidebarBox {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    padding: 14px;
+  }
+
+  /* Font di sidebar diperkecil */
+  .sidebarBox h3 {
+    font-size: 0.6rem;
+  }
+
+  .sidebarBox p,
+  .categoryBtn,
+  .popularLink,
+  .ctaBtn,
+  .categoryList li,
+  .popularList li {
+    font-size: 0.55rem;
+  }
+
+  /* Tombol kategori padding dikurangi agar tidak terlalu besar */
+  .categoryBtn {
+    padding: 8px 10px;
+  }
+
+  /* Artikel card sedikit mengecil padding-nya */
+  .blogCardContent {
+    padding: 16px;
+  }
+
+  .blogCardTitle {
+    font-size: 0.85rem;
+  }
+
+  .blogCardExcerpt {
+    font-size: 0.7rem;
+  }
+  .catBadge {
+    font-size: 0.6rem;
+  }
+  .blogCardMeta {
+    font-size: 0.5rem;
+    text-align: left;
+  }
+  .keyword {
+    font-size: 0.55rem;
   }
 }
