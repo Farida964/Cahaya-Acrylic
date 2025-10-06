@@ -442,4 +442,8 @@ body {
   .keyword {
     font-size: 0.55rem;
   }
+  .ctaBtn {
+    padding: 4px 5px;
+    font-size: 0.44rem;
+  }
 }
