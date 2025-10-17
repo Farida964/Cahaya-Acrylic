@@ -14,6 +14,12 @@
     { "id": 12, "title": "Key Chain", "price": "5k", "img" : "/Product/KEY_C_03.png","kategori":"Gantungan Kunci", "desc" : "Mulai dari 5K, Ukuran 5x5 cm Custom" },
     { "id": 13, "title": "Custom Item", "price": "250K", "img" : "/Product/CST_I_01.jpg", "kategori":"Custom Item", "desc" : "Mulai dari 250K/ pcs, Custom" },
     { "id": 14, "title": "Custom Akrilik", "price": "25", "img" : "/Product/CST_I_02.jpg", "kategori":"Custom Item", "desc" : "Mulai dari 25 rupiah/cm, Ukuran 2 mm Custom" },
-     { "id": 2, "title": "Plakat Acrylic", "price": "180k", "img" : "/Product/PLKT_5.jpg", "kategori":"Plakat", "desc" : "Plakat Custom, Ketebalan 10mm, Tinggi 20cm" }
-   
+    { "id": 15, "title": "Plakat Acrylic", "price": "180k", "img" : "/Product/PLKT_5.jpg", "kategori":"Plakat", "desc" : "Plakat Custom, Ketebalan 10mm, Tinggi 20cm" },
+    { "id": 16, "title": "Etalase Custom", "price": "750k", "img" : "/Product/CST_I_03.jpg", "kategori":"Custom Item", "desc" : "Ketebalan 5mm, Panjang 50 cm, Tinggi 45cm, Lebar 20cm. Harga menyesuakan kebutuhan customer"},
+    { "id": 17, "title": "Neon Box Custom Foto", "price": "500K", "img" : "/Product/CST_I_04.jpg", "kategori":"Custom Item", "desc" : "Ukuran : 50 x 40 cm, Ketebalan 3 mm. Harga menyesuakan kebutuhan customer"},
+    { "id": 18, "title": "Acrylic LED Foto", "price": "45K", "img" : "/Product/CST_I_05.jpg", "kategori":"Custom Item", "desc" : "Ukuran : 21 x 15 cm, Ketebalan 3 mm, sudah termasuk lampu LED"},
+    { "id": 19, "title": "Acrylic LED Custom", "price": "45K", "img" : "/Product/CST_I_06.jpg", "kategori":"Custom Item", "desc" : "Ukuran : 21 x 15 cm, Ketebalan 3 mm, sudah termasuk lampu LED"},
+    { "id": 20, "title": "Frame Acrylic", "price": "650K", "img" : "/Product/FRM_02.jpg", "kategori":"Signage", "desc" : "Frame Acrylic Custom"},      
+    { "id": 21, "title": "Huruf Timbul Custom", "price": "950K", "img" : "/Product/HRF_T_02.jpg", "kategori":"Huruf Timbul", "desc" : "Huruf Timbul Custom lengkap" },
+    { "id": 22, "title": "Papan Toilet Grafir", "price": "150K", "img" : "/Product/SGN_02.jpg", "kategori":"Signage", "desc" : "Papan Custom Acrylic Grafir, Ukuran 48 x 24 cm"}  
 ]
