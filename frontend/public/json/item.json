@@ -9,7 +9,7 @@
     
     { "id": 8, "title": "Tent Holder", "price": "10k", "img" : "/Product/CA6.png", "kategori":"Tent Holder", "desc" : "Mulai dari 10K, Custom" },
     { "id": 9, "title": "Papan Bunga", "price": "300K", "img" : "/Product/KRG_B.jpg", "kategori":"Custom Item", "desc" : "Mulai dari 300K, Ketebalan 2 mm, Ukuran 10x30cm"},
-    { "id": 10, "title": "Signage (Papan Tanda) ", "price": "30K", "img" : "/Product/SGN_B.jpg", "kategori":"Signage", "desc" : "Mulai dari 30k, Ketebalan 2 mm, Ukuran 10x30 cm" },
+    { "id": 10, "title": "Signage (Papan Tanda) ", "price": "30K", "img" : "/Product/SGN_B.jpg", "kategori":"Signage", "desc" : "Papan Tanda (Stiker), Ketebalan 2 mm, Ukuran 10x30 cm" },
     { "id": 11, "title": "Kotak Hantaran", "price": "80K", "img" : "/Product/BOX_H_02.jpg", "kategori":"Custom Item", "desc" : "Mulai dari 80K, Ukuran 15x20x20 cm" },
     { "id": 12, "title": "Key Chain", "price": "5k", "img" : "/Product/KEY_C_03.png","kategori":"Gantungan Kunci", "desc" : "Mulai dari 5K, Ukuran 5x5 cm Custom" },
     { "id": 13, "title": "Custom Item", "price": "250K", "img" : "/Product/CST_I_01.jpg", "kategori":"Custom Item", "desc" : "Mulai dari 250K/ pcs, Custom" },
@@ -18,9 +18,10 @@
     { "id": 16, "title": "Etalase Custom", "price": "750k", "img" : "/Product/CST_I_03.jpg", "kategori":"Custom Item", "desc" : "Ketebalan 5mm, Panjang 50 cm, Tinggi 45cm, Lebar 20cm. Harga menyesuakan kebutuhan customer"},
     { "id": 17, "title": "Neon Box Custom Foto", "price": "500K", "img" : "/Product/CST_I_04.jpg", "kategori":"Custom Item", "desc" : "Ukuran : 50 x 40 cm, Ketebalan 3 mm. Harga menyesuakan kebutuhan customer"},
     { "id": 18, "title": "Acrylic LED Foto", "price": "45K", "img" : "/Product/CST_I_05.jpg", "kategori":"Custom Item", "desc" : "Ukuran : 21 x 15 cm, Ketebalan 3 mm, sudah termasuk lampu LED.  PROMO : BUY 1 GET 1!"},
-    { "id": 19, "title": "Frame Acrylic", "price": "650K", "img" : "/Product/FRM_02.jpg", "kategori":"Signage", "desc" : "Frame Acrylic Custom"},      
+    { "id": 19, "title": "Frame Acrylic", "price": "650K", "img" : "/Product/FRM_02.jpg", "kategori":"Signage", "desc" : "Frame Acrylic Custom, Huruf Timbul Tipis"},      
     { "id": 20, "title": "Huruf Timbul Custom", "price": "950K", "img" : "/Product/HRF_T_02.jpg", "kategori":"Huruf Timbul", "desc" : "Huruf Timbul Custom lengkap" },
     { "id": 21, "title": "Papan Toilet Grafir", "price": "150K", "img" : "/Product/SGN_02.jpg", "kategori":"Signage", "desc" : "Papan Custom Acrylic Grafir, Ukuran 48 x 24 cm"}, 
     { "id": 22, "title": "Huruf Timbul Custom", "price": "100K", "img" : "/Product/HRF_T_03.jpg", "kategori":"Huruf Timbul", "desc" : "Huruf Timbul Custom, Ukuran 10 cm 3D" }, 
-    { "id": 23, "title": "Standee Figure Akrilik", "price": "10K", "img" : "/Product/STF_01.jpg", "kategori":"Custom Item", "desc" : "Standee Figure Akrilik Custom, Ukuran 16 cm, Ketebalan 2 mm" }
+    { "id": 23, "title": "Standee Figure Akrilik", "price": "10K", "img" : "/Product/STF_01.jpg", "kategori":"Custom Item", "desc" : "Standee Figure Akrilik Custom, Ukuran 16 cm, Ketebalan 2 mm" }, 
+    { "id": 24, "title": "Frame Akrilik Custom", "price": "250K", "img" : "/Product/FRM_03.jpg", "kategori":"Signage", "desc" : "Signage Frame Akrilik Custom, Ukurab A2" }
 ]
