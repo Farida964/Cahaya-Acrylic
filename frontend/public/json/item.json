@@ -23,5 +23,6 @@
     { "id": 21, "title": "Papan Toilet Grafir", "price": "150K", "img" : "/Product/SGN_02.jpg", "kategori":"Signage", "desc" : "Papan Custom Acrylic Grafir, Ukuran 48 x 24 cm"}, 
     { "id": 22, "title": "Huruf Timbul Custom", "price": "100K", "img" : "/Product/HRF_T_03.jpg", "kategori":"Huruf Timbul", "desc" : "Huruf Timbul Custom, Ukuran 10 cm 3D" }, 
     { "id": 23, "title": "Standee Figure Akrilik", "price": "10K", "img" : "/Product/STF_01.jpg", "kategori":"Custom Item", "desc" : "Standee Figure Akrilik Custom, Ukuran 16 cm, Ketebalan 2 mm" }, 
-    { "id": 24, "title": "Frame Akrilik Custom", "price": "250K", "img" : "/Product/FRM_03.jpg", "kategori":"Signage", "desc" : "Signage Frame Akrilik Custom, Ukurab A2" }
+    { "id": 24, "title": "Frame Akrilik Custom", "price": "250K", "img" : "/Product/FRM_03.jpg", "kategori":"Signage", "desc" : "Signage Frame Akrilik Custom, Ukurab A2" },
+    { "id": 24, "title": "Huruf Timbul Custom", "price": "80K", "img" : "/Product/HRF_T_04.jpg", "kategori":"Huruf Timbul", "desc" : "Huruf Timbul Custom, Ukuran 8 cm 3D" }
 ]
