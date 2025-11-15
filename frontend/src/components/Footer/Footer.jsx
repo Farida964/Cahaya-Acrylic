@@ -20,7 +20,7 @@ function Footer() {
           </div>
           <div className={styles.contactItem}>
             <FaPhone className={styles.icon} />
-            <p>+62 811-8840-838</p>
+            <p>+62 811-9584-838</p>
           </div>
           <div className={styles.contactItem}>
             <FaEnvelope className={styles.icon} />

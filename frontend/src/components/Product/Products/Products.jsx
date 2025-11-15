@@ -11,7 +11,7 @@ function Products() {
     const [selectedItem, setSelectedItem] = useState(null);
 
     const handleBuyNow = (item) => {
-        const phone = '081113801838';
+        const phone = '628119584838';
         const message = `Halo, saya ingin membeli produk ${item.title}.`;
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     };

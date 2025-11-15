@@ -29,7 +29,7 @@ function Product() {
 
             <Navbar />
             {/* <Hero /> */}
-            <Swipe />
+            {/* <Swipe /> */}
             <div className={styles.layout}>
                 <Products />
             </div>
